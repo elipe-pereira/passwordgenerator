@@ -29,24 +29,27 @@ class Main:
     def main(self):
         print("Bem vindo ao Password Generator!!")
         tamanho = int(input("Infomrme o tamanho da senha a ser gerada: "))
-        adiciona_caracteres_especiais = input("Adiciona caracteres especiais ? [sim, não] : ")
-        adiciona_maiusculas = input("Adiciona letras maiúsculas ? [sim, não] : ")
-        adiciona_numeros = input("Adiciona números ? [sim, não] : ")
+        adiciona_caracteres_especiais = input("Adiciona caracteres especiais? [sim, não] : ")
+        adiciona_maiusculas = input("Adiciona letras maiúsculas? [sim, não] : ")
+        adiciona_numeros = input("Adiciona números? [sim, não] : ")
 
         self.lista_caracteres_validos += self.alfabeto_minusculo
 
         if adiciona_caracteres_especiais.lower() == "sim":
             self.lista_caracteres_validos += self.caracteres_especiais
-        elif adiciona_maiusculas.lower() == "sim":
+
+        if adiciona_maiusculas.lower() == "sim":
             self.lista_caracteres_validos += self.alfabeto_maiusculo
-        elif adiciona_numeros.lower() == "sim":
+            
+        if adiciona_numeros.lower() == "sim":
             self.lista_caracteres_validos += self.numeros
 
+        print(self.lista_caracteres_validos)
         for numero in range(tamanho):
             letra = str(self.lista_caracteres_validos[randrange(len(self.lista_caracteres_validos) - 1)])
             self.Password += letra
 
-        system("clear")
+        # system("clear")
         print(
             """
       
