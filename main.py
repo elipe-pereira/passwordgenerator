@@ -6,6 +6,7 @@ from random import randrange
 
 class Main:
     def __init__(self):
+
         self.alfabeto_minusculo = [
             "a", "b", "c", "d", "e", "f",
             "g", "h", "i", "j", "k", "l",
@@ -13,6 +14,7 @@ class Main:
             "s", "t", "u", "v", "w", "x",
             "y", "z"
         ]
+
         self.alfabeto_maiusculo = [
             "A", "B", "C", "D", "E", "F",
             "G", "H", "I", "J", "K", "L",
@@ -32,13 +34,12 @@ class Main:
         adiciona_numeros = input("Adiciona números ? [sim, não] : ")
 
         self.lista_caracteres_validos += self.alfabeto_minusculo
-       
+
         if adiciona_caracteres_especiais.lower() == "sim":
             self.lista_caracteres_validos += self.caracteres_especiais
-        if adiciona_maiusculas.lower() == "sim":
+        elif adiciona_maiusculas.lower() == "sim":
             self.lista_caracteres_validos += self.alfabeto_maiusculo
-
-        if adiciona_numeros.lower() == "sim":
+        elif adiciona_numeros.lower() == "sim":
             self.lista_caracteres_validos += self.numeros
 
         for numero in range(tamanho):
@@ -46,15 +47,14 @@ class Main:
             self.Password += letra
 
         system("clear")
-       
         print(
             """
-       
-       
+      
+    
 
                 %s
 
 
-         
+       
             """ % self.Password
             )
