@@ -40,16 +40,15 @@ class Main:
 
         if adiciona_maiusculas.lower() == "sim":
             self.lista_caracteres_validos += self.alfabeto_maiusculo
-            
+
         if adiciona_numeros.lower() == "sim":
             self.lista_caracteres_validos += self.numeros
 
-        print(self.lista_caracteres_validos)
         for numero in range(tamanho):
             letra = str(self.lista_caracteres_validos[randrange(len(self.lista_caracteres_validos) - 1)])
             self.Password += letra
 
-        # system("clear")
+        system("clear")
         print(
             """
       
