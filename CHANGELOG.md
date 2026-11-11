@@ -1,11 +1,11 @@
 ### CHANGELOG
 #### [Released]
-#### [0.1.1-1] - 2026-11-08
+#### [0.1.1] - 2026-11-08
 ##### Fixed
     - Adição de números maiúsculos e números.
 
 #### [Released]
-#### [0.1.0-0]  - 2026-11-08
+#### [0.1.0]  - 2026-11-08
 #### Added
     - Gerador de senhas de linha de comando.
 
